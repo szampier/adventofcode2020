@@ -44,8 +44,8 @@ def part2(program):
 def main(inp):
     lines = open(inp).read().splitlines()
     program = parse(lines)
-    print('Part 1:', run(program)[0])
-    print('Part 2:', part2(program))
+    print('day08.1:', run(program)[0])
+    print('day08.2:', part2(program))
 
 if __name__ == '__main__':
-    main('input.txt')
+    main('../input/input08.txt')

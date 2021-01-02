@@ -21,8 +21,8 @@ def part2(seats):
 def main(inp):
     lines = open(inp).read().splitlines()
     seats = [8 * find_row(rows, line[:7]) + find_row(cols, line[-3:]) for line in lines]
-    print('Part 1:', max(seats))
-    print('Part 2:', part2(seats))
+    print('day05.1:', max(seats))
+    print('day05.2:', part2(seats))
 
 if __name__ == '__main__':
-    main('input.txt')
+    main('../input/input05.txt')

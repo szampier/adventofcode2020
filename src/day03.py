@@ -17,8 +17,8 @@ def main(inp):
     part2 *= count_trees(lines, 5, 1)
     part2 *= count_trees(lines, 7, 1)
     part2 *= count_trees(lines, 1, 2)
-    print('Part 1:', part1)
-    print('Part 2:', part2)
+    print('day03.1:', part1)
+    print('day03.2:', part2)
 
 if __name__ == '__main__':
-    main('input.txt')
+    main('../input/input03.txt')

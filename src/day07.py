@@ -38,8 +38,8 @@ def part2(bags, bag):
 
 def main(inp):
     bags = parse_input(inp)
-    print('Part 1:', part1(bags))
-    print('Part 2:', part2(bags, 'shinygold') - 1)
+    print('day07.1:', part1(bags))
+    print('day07.2:', part2(bags, 'shinygold') - 1)
 
 if __name__ == '__main__':
-    main('input.txt')
+    main('../input/input07.txt')

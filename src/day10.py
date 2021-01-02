@@ -27,8 +27,8 @@ def main(inp):
     lines = open(inp).read().splitlines()
     numbers = sorted([int(x) for x in lines])
     numbers = [0] + numbers + [numbers[-1] + 3]
-    print('Part 1:', part1(numbers))
-    print('Part 2:', part2(numbers))
+    print('day10.1:', part1(numbers))
+    print('day10.2:', part2(numbers))
 
 if __name__ == '__main__':
-    main('input.txt')
+    main('../input/input10.txt')

@@ -13,8 +13,8 @@ def part2(numbers):
 def main(inp):
     lines = open(inp).read().splitlines()
     numbers = list(map(int, lines))
-    print('Part 1:', part1(numbers))
-    print('Part 2:', part2(numbers))
+    print('day01.1:', part1(numbers))
+    print('day01.2:', part2(numbers))
 
 if __name__ == '__main__':
-    main('input.txt')
+    main('../input/input01.txt')

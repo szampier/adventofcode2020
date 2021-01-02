@@ -25,8 +25,8 @@ def main(inp):
     lines = open(inp).read().splitlines()
     numbers = list(map(int, lines))
     invalid_number = part1(numbers)
-    print('Part 1:', invalid_number)
-    print('Part 2:', part2(numbers, invalid_number))
+    print('day09.1:', invalid_number)
+    print('day09.2:', part2(numbers, invalid_number))
 
 if __name__ == '__main__':
-    main('input.txt')
+    main('../input/input09.txt')

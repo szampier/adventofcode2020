@@ -43,8 +43,8 @@ def part2(passports):
 def main(inp):
     lines = open(inp).read().splitlines()
     passports = parse(lines)
-    print('Part 1:', part1(passports))
-    print('Part 2:', part2(passports))
+    print('day04.1:', part1(passports))
+    print('day04.2:', part2(passports))
 
 if __name__ == '__main__':
-    main('input.txt')
+    main('../input/input04.txt')

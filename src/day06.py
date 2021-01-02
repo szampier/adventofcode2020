@@ -25,8 +25,8 @@ def part2(groups):
 def main(inp):
     lines = open(inp).read().splitlines()
     groups = parse(lines)
-    print('Part 1:', part1(groups))
-    print('Part 2:', part2(groups))
+    print('day06.1:', part1(groups))
+    print('day06.2:', part2(groups))
 
 if __name__ == '__main__':
-    main('input.txt')
+    main('../input/input06.txt')

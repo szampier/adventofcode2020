@@ -21,8 +21,8 @@ def part2(lines):
 
 def main(inp):
     lines = open(inp).read().splitlines()
-    print('Part 1:', part1(lines))
-    print('Part 2:', part2(lines))
+    print('day02.1:', part1(lines))
+    print('day02.2:', part2(lines))
 
 if __name__ == '__main__':
-    main('input.txt')
+    main('../input/input02.txt')
