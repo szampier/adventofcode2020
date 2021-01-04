@@ -23,10 +23,14 @@ def part2(groups):
     return count
 
 def main(inp):
-    lines = open(inp).read().splitlines()
+    with open(inp) as f:
+        lines = f.read().splitlines()
     groups = parse(lines)
-    print('day06.1:', part1(groups))
-    print('day06.2:', part2(groups))
+    res1 = part1(groups)
+    res2 = part2(groups)
+    return res1, res2
 
 if __name__ == '__main__':
-    main('../input/input06.txt')
+    a, b = main('../input/input06.txt')
+    print('day06.1:', a)
+    print('day06.2:', b)

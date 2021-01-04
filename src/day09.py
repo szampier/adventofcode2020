@@ -22,11 +22,14 @@ def part2(numbers, invalid_number):
                 break
 
 def main(inp):
-    lines = open(inp).read().splitlines()
+    with open(inp) as f:
+        lines = f.read().splitlines()
     numbers = list(map(int, lines))
     invalid_number = part1(numbers)
-    print('day09.1:', invalid_number)
-    print('day09.2:', part2(numbers, invalid_number))
+    res2 = part2(numbers, invalid_number)
+    return invalid_number, res2
 
 if __name__ == '__main__':
-    main('../input/input09.txt')
+    a, b = main('../input/input09.txt')
+    print('day09.1:', a)
+    print('day09.2:', b)

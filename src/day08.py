@@ -42,10 +42,14 @@ def part2(program):
             return acc
 
 def main(inp):
-    lines = open(inp).read().splitlines()
+    with open(inp) as f:
+        lines = f.read().splitlines()
     program = parse(lines)
-    print('day08.1:', run(program)[0])
-    print('day08.2:', part2(program))
+    res1 = run(program)[0]
+    res2 = part2(program)
+    return res1, res2
 
 if __name__ == '__main__':
-    main('../input/input08.txt')
+    a, b = main('../input/input08.txt')
+    print('day08.1:', a)
+    print('day08.2:', b)

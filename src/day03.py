@@ -10,15 +10,17 @@ def count_trees(lines, right, down):
     return count
 
 def main(inp):
-    lines = open(inp).read().splitlines()
+    with open(inp) as f:
+        lines = f.read().splitlines()
     part1 = count_trees(lines, 3, 1)
     part2 = part1
     part2 *= count_trees(lines, 1, 1)
     part2 *= count_trees(lines, 5, 1)
     part2 *= count_trees(lines, 7, 1)
     part2 *= count_trees(lines, 1, 2)
-    print('day03.1:', part1)
-    print('day03.2:', part2)
+    return part1, part2
 
 if __name__ == '__main__':
-    main('../input/input03.txt')
+    a, b = main('../input/input03.txt')
+    print('day03.1:', a)
+    print('day03.2:', b)

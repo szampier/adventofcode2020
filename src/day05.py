@@ -19,10 +19,14 @@ def part2(seats):
             return (n+1)
 
 def main(inp):
-    lines = open(inp).read().splitlines()
+    with open(inp) as f:
+        lines = f.read().splitlines()
     seats = [8 * find_row(rows, line[:7]) + find_row(cols, line[-3:]) for line in lines]
-    print('day05.1:', max(seats))
-    print('day05.2:', part2(seats))
+    res1 = max(seats)
+    res2 = part2(seats)
+    return res1, res2
 
 if __name__ == '__main__':
-    main('../input/input05.txt')
+    a, b = main('../input/input05.txt')
+    print('day05.1:', a)
+    print('day05.2:', b)

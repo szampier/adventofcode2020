@@ -11,10 +11,14 @@ def part2(numbers):
             return x * y * z
 
 def main(inp):
-    lines = open(inp).read().splitlines()
+    with open(inp) as f:
+        lines = f.read().splitlines()
     numbers = list(map(int, lines))
-    print('day01.1:', part1(numbers))
-    print('day01.2:', part2(numbers))
+    res1 = part1(numbers)
+    res2 = part2(numbers)
+    return res1, res2
 
 if __name__ == '__main__':
-    main('../input/input01.txt')
+    a, b = main('../input/input01.txt')
+    print('day01.1:', a)
+    print('day01.2:', b)

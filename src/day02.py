@@ -20,9 +20,13 @@ def part2(lines):
     return valid
 
 def main(inp):
-    lines = open(inp).read().splitlines()
-    print('day02.1:', part1(lines))
-    print('day02.2:', part2(lines))
+    with open(inp) as f:
+        lines = f.read().splitlines()
+    res1 = part1(lines)
+    res2 = part2(lines)
+    return res1, res2
 
 if __name__ == '__main__':
-    main('../input/input02.txt')
+    a, b = main('../input/input02.txt')
+    print('day02.1:', a)
+    print('day02.2:', b)

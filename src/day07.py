@@ -1,8 +1,7 @@
 from collections import defaultdict
 
-def parse_input(inp):
+def parse_input(lines):
     bags = defaultdict(list)
-    lines = open(inp).read().splitlines()
     for line in lines:
         items = line.replace(',','').replace('.','').split()
         if items[-2] == 'other':
@@ -37,9 +36,14 @@ def part2(bags, bag):
     return count
 
 def main(inp):
-    bags = parse_input(inp)
-    print('day07.1:', part1(bags))
-    print('day07.2:', part2(bags, 'shinygold') - 1)
+    with open(inp) as f:
+        lines = f.read().splitlines()
+    bags = parse_input(lines)
+    res1 = part1(bags)
+    res2 = part2(bags, 'shinygold') - 1
+    return res1, res2
 
 if __name__ == '__main__':
-    main('../input/input07.txt')
+    a, b = main('../input/input07.txt')
+    print('day07.1:', a)
+    print('day07.2:', b)

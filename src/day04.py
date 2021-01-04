@@ -1,7 +1,5 @@
 import re
 
-required_fields = set(['byr', 'iyr', 'eyr', 'hgt', 'hcl', 'ecl', 'pid'])
-
 def parse(lines):
     passports = []
     passport = {}
@@ -18,6 +16,7 @@ def parse(lines):
     return passports
 
 def has_required_fields(passport):
+    required_fields = set(['byr', 'iyr', 'eyr', 'hgt', 'hcl', 'ecl', 'pid'])
     return set(passport.keys()) == required_fields
 
 def is_valid(p):
@@ -41,10 +40,14 @@ def part2(passports):
     return len([p for p in passports if has_required_fields(p) and is_valid(p)])
 
 def main(inp):
-    lines = open(inp).read().splitlines()
+    with open(inp) as f:
+        lines = f.read().splitlines()
     passports = parse(lines)
-    print('day04.1:', part1(passports))
-    print('day04.2:', part2(passports))
+    res1 = part1(passports)
+    res2 = part2(passports)
+    return res1, res2
 
 if __name__ == '__main__':
-    main('../input/input04.txt')
+    a, b = main('../input/input04.txt')
+    print('day04.1:', a)
+    print('day04.2:', b)
